@@ -1,7 +1,7 @@
 ---
 templateKey: product-page
 title: Our Coffee
-image: /img/jumbotron.jpg
+image: /img/screen-shot-2018-02-27-at-17.26.50.png
 heading: What we offer
 description: >-
   Kaldi is the ultimative spot-on for coffee lovers who want to learn about
