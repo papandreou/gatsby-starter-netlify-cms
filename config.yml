@@ -1,0 +1,94 @@
+backend: 
+  branch: master
+  name: git-gateway
+collections: 
+  - 
+    create: true
+    fields: 
+      - 
+        default: blog
+        label: Layout
+        name: layout
+        widget: hidden
+      - 
+        label: Title
+        name: title
+        widget: string
+      - 
+        label: "Publish Date"
+        name: date
+        widget: datetime
+      - 
+        label: "Featured Image"
+        name: thumbnail
+        widget: image
+      - 
+        label: "Rating (scale of 1-5)"
+        name: rating
+        widget: number
+      - 
+        label: Body
+        name: body
+        widget: markdown
+    folder: _posts/blog
+    label: Blog
+    name: blog
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  - 
+    create: true
+    fields: 
+      - 
+        label: Title
+        name: title
+        widget: string
+      - 
+        label: "Publish Date"
+        name: date
+        widget: datetime
+      - 
+        label: "Featured Image"
+        name: thumbnail
+        widget: image
+      - 
+        label: "Rating (scale of 1-5)"
+        name: rating
+        widget: number
+      - 
+        label: Body
+        name: body
+        widget: markdown
+      - 
+        allow_add: true
+        fields: 
+          - 
+            label: Title
+            name: title
+            widget: string
+          - 
+            allow_add: true
+            fields: 
+              - 
+                label: Type
+                name: type
+                options: 
+                  - overview
+                  - intro
+                  - text
+                  - quote
+                widget: select
+              - 
+                label: Text
+                name: text
+                widget: string
+            label: Slides
+            name: slides
+            widget: list
+        label: Lessons
+        name: lessons
+        widget: list
+    folder: courses
+    label: Course
+    name: course
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+media_folder: images/uploads
+publish_mode: editorial_workflow
